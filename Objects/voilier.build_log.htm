@@ -21,11 +21,12 @@ Target DLL:      UL2CM3.DLL V1.163.9.0
 Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
-U:\GitHub\voilier\voilier.uvprojx
-Project File Date:  10/14/2021
+U:\Micromat\voilier\voilier.uvprojx
+Project File Date:  10/18/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+<<<<<<< Updated upstream
 Rebuild target 'Simule'
 assembling startup_stm32f10x_md.s...
 compiling system_stm32f10x.c...
@@ -37,6 +38,27 @@ compiling plateau.c...
 linking...
 Program Size: Code=2592 RO-data=268 RW-data=20 ZI-data=1636  
 ".\Objects\voilier.axf" - 0 Error(s), 0 Warning(s).
+=======
+Rebuild target 'Reel'
+compiling principal.c...
+compiling My_GPIO.c...
+compiling My_Girouette.c...
+compiling MyTimer.c...
+compiling ADC.c...
+compiling plateau.c...
+.\Include\UART.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif
+plateau.c: 1 warning, 0 errors
+compiling UART.c...
+Include\UART.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif
+Include\UART.c: 1 warning, 0 errors
+assembling startup_stm32f10x_md.s...
+compiling system_stm32f10x.c...
+linking...
+Program Size: Code=5260 RO-data=268 RW-data=16 ZI-data=1632  
+".\Objects\voilier.axf" - 0 Error(s), 2 Warning(s).
+>>>>>>> Stashed changes
 
 <h2>Software Packages used:</h2>
 
@@ -54,7 +76,7 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\Device\STM32F103RB
-  .\RTE\_Simule
+  .\RTE\_Reel
   C:\Programdata\Keil\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
   C:\Programdata\Keil\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
 
@@ -64,9 +86,15 @@ Package Vendor: Keil
 
    * Component: Keil::Device:Startup:1.0.0
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+<<<<<<< Updated upstream
       Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+=======
+      Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+>>>>>>> Stashed changes
 Build Time Elapsed:  00:00:04
 </pre>
 </body>

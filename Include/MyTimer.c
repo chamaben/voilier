@@ -220,8 +220,20 @@ void TIM4_IRQHandler(void){
 	TIM4->SR &= ~(1<<0);
 }
 
-
-
+void Init_TIM_encoder (TIM_TypeDef*Timer_enc){
+	 
+	//CC1S = 01
+	Timer_enc->CCMR1 &= ~(0x2);
+	Timer_enc->CCMR1 |= (0x1);
+	//CC2S = 01
+	Timer_enc->CCMR1 &= ~(0x2<<8);
+	Timer_enc->CCMR1 |= (0x1<<8);
+	//SMS= 010
+	Timer_enc->SMCR &=~(0x7);
+	Timer_enc->SMCR |= (0x1);
+	//CEN=1
+	MyTimer_Base_Start(Timer_enc );
+}
 
 
 

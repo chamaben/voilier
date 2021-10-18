@@ -4,7 +4,7 @@
 #include "My_GPIO.h"
 
 
-int main (void)
+int main2 (void)
 {
 	UART_config();
 	MyGPIO_Init (GPIOA, 6, Out_Ppull );

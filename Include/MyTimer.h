@@ -25,4 +25,10 @@ void TIM2_IRQHandler(void);
 void TIM3_IRQHandler(void);
 void TIM4_IRQHandler(void);
 
+void Init_TIM_encoder (TIM_TypeDef*Timer_enc);
+
+
+
+
+
 #endif

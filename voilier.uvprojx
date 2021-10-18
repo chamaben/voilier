@@ -357,7 +357,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\Include</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
@@ -388,6 +388,11 @@
               <FileType>1</FileType>
               <FilePath>.\plateau.c</FilePath>
             </File>
+            <File>
+              <FileName>principal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\principal.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -397,6 +402,11 @@
               <FileName>ADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Include\ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Include\My_Girouette.c</FilePath>
             </File>
             <File>
               <FileName>My_GPIO.c</FileName>
@@ -427,7 +437,8 @@
       <TargetName>Reel</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <uAC6>1</uAC6>
+      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103RB</Device>
@@ -675,17 +686,17 @@
                 <Size>0x0</Size>
               </XRAM>
               <OCR_RVCT1>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT1>
               <OCR_RVCT2>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT2>
               <OCR_RVCT3>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT3>
@@ -695,7 +706,7 @@
                 <Size>0x20000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT5>
@@ -729,7 +740,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -755,7 +766,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -804,6 +815,11 @@
               <FileType>1</FileType>
               <FilePath>.\plateau.c</FilePath>
             </File>
+            <File>
+              <FileName>principal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\principal.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -813,6 +829,11 @@
               <FileName>ADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Include\ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Include\My_Girouette.c</FilePath>
             </File>
             <File>
               <FileName>My_GPIO.c</FileName>
