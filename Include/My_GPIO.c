@@ -26,3 +26,19 @@ void MyGPIO_Init (GPIO_TypeDef * GPIO, char pin,unsigned int GPIO_Conf ){
 
 
 }
+
+// lire dans idr
+int MyGPIO_Read ( GPIO_TypeDef * GPIO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        , char GPIO_Pin ) {
+    return (GPIO-> IDR >> GPIO_Pin);
+
+}
+
+// mettre 1 dans le registre odr
+void MyGPIO_Set ( GPIO_TypeDef * GPIO , char GPIO_Pin ) {
+    GPIO->BSRR = (1 << GPIO_Pin);
+} 
+
+// mettre 0 dans le timer
+void MyGPIO_Reset ( GPIO_TypeDef * GPIO , char GPIO_Pin ) {
+    GPIO->BRR = (1 << GPIO_Pin);
+} 

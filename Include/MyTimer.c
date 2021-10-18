@@ -148,6 +148,22 @@ if (Timer == TIM4) {
 
 
 }
+
+void Set_Duty_PWM (TIM_TypeDef * Timer, char Channel, int ratio) {
+	if (Channel == 1) {
+		Timer -> CCR1 = ratio*(Timer->ARR)/100;
+	}
+	else if (Channel == 2) {
+		Timer -> CCR2 = ratio*(Timer->ARR)/100;
+	}
+	else if (Channel == 3) {
+		Timer -> CCR3 = ratio*(Timer->ARR)/100;
+	}
+	else if (Channel == 4) {
+		Timer -> CCR4 = ratio*(Timer->ARR)/100;
+	}
+	
+}
 void MyTimer_Base_Start(TIM_TypeDef* Timer ){
 	Timer->CR1 |= 1;
 }

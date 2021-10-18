@@ -12,6 +12,8 @@ void MyTimer_Base_Init ( TIM_TypeDef* Timer, unsigned short ARR, unsigned short 
 
 void MyTimer_PWM(TIM_TypeDef*Timer ,char Channel,int percent_cycle ) ; 
 
+void Set_Duty_PWM (TIM_TypeDef * Timer, char Channel, int ratio);
+
 void MyTimer_Base_Start (TIM_TypeDef* Timer) ;
 
 void MyTimer_Base_Stop (TIM_TypeDef* Timer) ;

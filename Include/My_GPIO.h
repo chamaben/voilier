@@ -12,5 +12,9 @@
 #define AltOut_OD 14 //0b1110
 
 void MyGPIO_Init (GPIO_TypeDef * GPIO, char pin,unsigned int GPIO_Conf ) ;
+int MyGPIO_Read ( GPIO_TypeDef * GPIO , char GPIO_Pin ) ; // lire dans idr
+void MyGPIO_Set ( GPIO_TypeDef * GPIO , char GPIO_Pin ) ; // mettre 1 dans le registre odr
+void MyGPIO_Reset ( GPIO_TypeDef * GPIO , char GPIO_Pin ) ; // mettre 0 dans le timer
+void MyGPIO_Toggle ( GPIO_TypeDef * GPIO , char GPIO_Pin ) ;
 
 #endif
