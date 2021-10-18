@@ -5,6 +5,7 @@ Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
 Section Cross References
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     plateau.o(i.main) refers to uart.o(i.UART_config) for UART_config
     plateau.o(i.main) refers to my_gpio.o(i.MyGPIO_Init) for MyGPIO_Init
     plateau.o(i.main) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
@@ -12,6 +13,8 @@ Section Cross References
     plateau.o(i.main) refers to mytimer.o(i.MyTimer_ActiveIT) for MyTimer_ActiveIT
     plateau.o(i.main) refers to uart.o(i.handling) for handling
 =======
+=======
+>>>>>>> Stashed changes
     plateau.o(i.main2) refers to uart.o(i.UART_config) for UART_config
     plateau.o(i.main2) refers to my_gpio.o(i.MyGPIO_Init) for MyGPIO_Init
     principal.o(i.main) refers to my_girouette.o(i.init_girouette) for init_girouette
@@ -31,6 +34,9 @@ Section Cross References
     my_girouette.o(i.init_girouette) refers to mytimer.o(i.MyTimer_ActiveIT) for MyTimer_ActiveIT
     my_girouette.o(i.init_girouette) refers to my_girouette.o(i.gestion_girouette) for gestion_girouette
     mytimer.o(i.Init_TIM_encoder) refers to mytimer.o(i.MyTimer_Base_Start) for MyTimer_Base_Start
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     mytimer.o(i.MyTimer_ActiveIT) refers to mytimer.o(.data) for Ptr_fct1
     mytimer.o(i.MyTimer_PWM) refers to my_gpio.o(i.MyGPIO_Init) for MyGPIO_Init
@@ -226,7 +232,10 @@ Removing Unused input sections from the image.
     Removing my_gpio.o(.revsh_text), (4 bytes).
     Removing my_gpio.o(.rrx_text), (6 bytes).
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     Removing my_gpio.o(i.MyGPIO_Read), (8 bytes).
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     Removing mytimer.o(.rev16_text), (4 bytes).
@@ -243,7 +252,11 @@ Removing Unused input sections from the image.
     Removing system_stm32f10x.o(.data), (20 bytes).
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 23 unused section(s) (total 366 bytes) removed from the image.
+=======
+31 unused section(s) (total 486 bytes) removed from the image.
+>>>>>>> Stashed changes
 =======
 31 unused section(s) (total 486 bytes) removed from the image.
 >>>>>>> Stashed changes
@@ -257,8 +270,11 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
@@ -268,7 +284,10 @@ Image Symbol Table
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
 >>>>>>> Stashed changes
@@ -276,6 +295,7 @@ Image Symbol Table
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
@@ -286,6 +306,8 @@ Image Symbol Table
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
 =======
+=======
+>>>>>>> Stashed changes
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
@@ -299,8 +321,11 @@ Image Symbol Table
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
@@ -310,15 +335,19 @@ Image Symbol Table
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
 =======
+=======
+>>>>>>> Stashed changes
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
     ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
@@ -335,12 +364,24 @@ Image Symbol Table
     ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
 =======
+=======
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+>>>>>>> Stashed changes
     ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
@@ -433,6 +474,7 @@ Image Symbol Table
     .text                                    0x08000240   Section        2  use_no_semi.o(.text)
     .text                                    0x08000242   Section        0  indicate_semi.o(.text)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     i.MyGPIO_Init                            0x08000244   Section        0  my_gpio.o(i.MyGPIO_Init)
     i.MyGPIO_Reset                           0x080002e0   Section        0  my_gpio.o(i.MyGPIO_Reset)
     i.MyGPIO_Set                             0x080002e8   Section        0  my_gpio.o(i.MyGPIO_Set)
@@ -455,6 +497,8 @@ Image Symbol Table
     i.handling                               0x08000a68   Section        0  uart.o(i.handling)
     i.main                                   0x08000ad0   Section        0  plateau.o(i.main)
 =======
+=======
+>>>>>>> Stashed changes
     i.Init_TIM_encoder                       0x08000242   Section        0  mytimer.o(i.Init_TIM_encoder)
     i.MyGPIO_Init                            0x08000280   Section        0  my_gpio.o(i.MyGPIO_Init)
     i.MyTimer_ActiveIT                       0x0800031c   Section        0  mytimer.o(i.MyTimer_ActiveIT)
@@ -491,6 +535,9 @@ Image Symbol Table
     x$fpl$fnaninf                            0x080014e2   Section      140  fnaninf.o(x$fpl$fnaninf)
     x$fpl$fretinf                            0x0800156e   Section       10  fretinf.o(x$fpl$fretinf)
     x$fpl$usenofp                            0x08001578   Section        0  usenofp.o(x$fpl$usenofp)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     .data                                    0x20000000   Section       16  mytimer.o(.data)
     .data                                    0x20000010   Section        4  uart.o(.data)
@@ -651,6 +698,7 @@ Image Symbol Table
     Init_TIM_encoder                         0x08000243   Thumb Code    60  mytimer.o(i.Init_TIM_encoder)
     __semihosting_library_function           0x08000243   Thumb Code     0  indicate_semi.o(.text)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     MyGPIO_Init                              0x08000245   Thumb Code   136  my_gpio.o(i.MyGPIO_Init)
     MyGPIO_Reset                             0x080002e1   Thumb Code     8  my_gpio.o(i.MyGPIO_Reset)
     MyGPIO_Set                               0x080002e9   Thumb Code     8  my_gpio.o(i.MyGPIO_Set)
@@ -671,6 +719,8 @@ Image Symbol Table
     Region$$Table$$Base                      0x08000b0c   Number         0  anon$$obj.o(Region$$Table)
     Region$$Table$$Limit                     0x08000b2c   Number         0  anon$$obj.o(Region$$Table)
 =======
+=======
+>>>>>>> Stashed changes
     MyGPIO_Init                              0x08000281   Thumb Code   136  my_gpio.o(i.MyGPIO_Init)
     MyTimer_ActiveIT                         0x0800031d   Thumb Code   160  mytimer.o(i.MyTimer_ActiveIT)
     MyTimer_Base_Init                        0x080003e1   Thumb Code    80  mytimer.o(i.MyTimer_Base_Init)
@@ -711,6 +761,9 @@ Image Symbol Table
     Region$$Table$$Base                      0x08001578   Number         0  anon$$obj.o(Region$$Table)
     __I$use$fp                               0x08001578   Number         0  usenofp.o(x$fpl$usenofp)
     Region$$Table$$Limit                     0x08001598   Number         0  anon$$obj.o(Region$$Table)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     Ptr_fct1                                 0x20000000   Data           4  mytimer.o(.data)
     Ptr_fct2                                 0x20000004   Data           4  mytimer.o(.data)
@@ -728,6 +781,7 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   Load Region LR_1 (Base: 0x08000000, Size: 0x00000b40, Max: 0xffffffff, ABSOLUTE)
 
@@ -840,6 +894,14 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
+=======
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000015a8, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001598, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+>>>>>>> Stashed changes
     0x08000000   0x08000000   0x000000ec   Data   RO          296    RESET               startup_stm32f10x_md.o
     0x080000ec   0x080000ec   0x00000008   Code   RO          351  * !!!main             c_w.l(__main.o)
     0x080000f4   0x080000f4   0x00000034   Code   RO          547    !!!scatter          c_w.l(__scatter.o)
@@ -952,6 +1014,9 @@ Memory Map of the image
     0x20000010        -       0x00000060   Zero   RW          417    .bss                c_w.l(libspace.o)
     0x20000070        -       0x00000200   Zero   RW          295    HEAP                startup_stm32f10x_md.o
     0x20000270        -       0x00000400   Zero   RW          294    STACK               startup_stm32f10x_md.o
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -963,6 +1028,7 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
        172         20          0          0          0       1830   my_gpio.o
       1450        102          0         16          0       5354   mytimer.o
         60         12          0          0          0     206739   plateau.o
@@ -972,6 +1038,18 @@ Image component sizes
 
     ----------------------------------------------------------------------
       2312        230        268         20       1536     217911   Object Totals
+=======
+       232         18          0          0          0       1457   my_girouette.o
+       156         20          0          0          0        938   my_gpio.o
+      1434        102          0         16          0       5310   mytimer.o
+         0          0          0          0          0     206360   plateau.o
+        24          8          0          0          0        375   principal.o
+        64         26        236          0       1536        788   startup_stm32f10x_md.o
+       328         28          0          0          0       1869   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+      2242        202        268         16       1536     217097   Object Totals
+>>>>>>> Stashed changes
 =======
        232         18          0          0          0       1457   my_girouette.o
        156         20          0          0          0        938   my_gpio.o
@@ -1027,8 +1105,13 @@ Image component sizes
 
     ----------------------------------------------------------------------
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
        280         16          0          0        100        584   Library Totals
          8          0          0          0          4          0   (incl. Padding)
+=======
+      3018        208          0          0         96       1960   Library Totals
+        14          0          0          0          0          0   (incl. Padding)
+>>>>>>> Stashed changes
 =======
       3018        208          0          0         96       1960   Library Totals
         14          0          0          0          0          0   (incl. Padding)
@@ -1043,7 +1126,11 @@ Image component sizes
 
     ----------------------------------------------------------------------
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
        280         16          0          0        100        584   Library Totals
+=======
+      3018        208          0          0         96       1960   Library Totals
+>>>>>>> Stashed changes
 =======
       3018        208          0          0         96       1960   Library Totals
 >>>>>>> Stashed changes
@@ -1056,6 +1143,7 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       2592        246        268         20       1636     217503   Grand Totals
       2592        246        268         20       1636     217503   ELF Image Totals
       2592        246        268         20          0          0   ROM Totals
@@ -1065,6 +1153,17 @@ Image component sizes
     Total RO  Size (Code + RO Data)                 2860 (   2.79kB)
     Total RW  Size (RW Data + ZI Data)              1656 (   1.62kB)
     Total ROM Size (Code + RO Data + RW Data)       2880 (   2.81kB)
+=======
+      5260        410        268         16       1632     217493   Grand Totals
+      5260        410        268         16       1632     217493   ELF Image Totals
+      5260        410        268         16          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 5528 (   5.40kB)
+    Total RW  Size (RW Data + ZI Data)              1648 (   1.61kB)
+    Total ROM Size (Code + RO Data + RW Data)       5544 (   5.41kB)
+>>>>>>> Stashed changes
 =======
       5260        410        268         16       1632     217493   Grand Totals
       5260        410        268         16       1632     217493   ELF Image Totals
