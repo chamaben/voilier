@@ -10,6 +10,7 @@ Section Cross References
     plateau.o(i.main) refers to my_gpio.o(i.MyGPIO_Init) for MyGPIO_Init
     plateau.o(i.main) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
     plateau.o(i.main) refers to mytimer.o(i.MyTimer_Base_Start) for MyTimer_Base_Start
+    plateau.o(i.main) refers to uart.o(i.init_timer_PWM) for init_timer_PWM
     plateau.o(i.main) refers to mytimer.o(i.MyTimer_ActiveIT) for MyTimer_ActiveIT
     plateau.o(i.main) refers to uart.o(i.handling) for handling
 =======
@@ -47,12 +48,12 @@ Section Cross References
     uart.o(i.UART_config) refers to uart.o(.data) for rx_byte
     uart.o(i.USART1_IRQHandler) refers to uart.o(.data) for rx_byte
     uart.o(i.handling) refers to my_gpio.o(i.MyGPIO_Reset) for MyGPIO_Reset
-    uart.o(i.handling) refers to my_gpio.o(i.MyGPIO_Set) for MyGPIO_Set
-    uart.o(i.handling) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
-    uart.o(i.handling) refers to mytimer.o(i.MyTimer_PWM) for MyTimer_PWM
     uart.o(i.handling) refers to mytimer.o(i.Set_Duty_PWM) for Set_Duty_PWM
     uart.o(i.handling) refers to mytimer.o(i.MyTimer_Base_Start) for MyTimer_Base_Start
+    uart.o(i.handling) refers to my_gpio.o(i.MyGPIO_Set) for MyGPIO_Set
     uart.o(i.handling) refers to uart.o(.data) for rx_byte
+    uart.o(i.init_timer_PWM) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
+    uart.o(i.init_timer_PWM) refers to mytimer.o(i.MyTimer_PWM) for MyTimer_PWM
     startup_stm32f10x_md.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_stm32f10x_md.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_stm32f10x_md.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
@@ -271,6 +272,7 @@ Image Symbol Table
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
 =======
@@ -280,9 +282,15 @@ Image Symbol Table
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+=======
+>>>>>>> Stashed changes
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
@@ -292,18 +300,25 @@ Image Symbol Table
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
 >>>>>>> Stashed changes
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+=======
+>>>>>>> Stashed changes
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+=======
+>>>>>>> Stashed changes
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
 =======
 =======
@@ -318,8 +333,8 @@ Image Symbol Table
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
 >>>>>>> Stashed changes
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
-    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
@@ -327,6 +342,9 @@ Image Symbol Table
 =======
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
 >>>>>>> Stashed changes
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
@@ -337,8 +355,10 @@ Image Symbol Table
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+<<<<<<< Updated upstream
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
 =======
 =======
@@ -353,16 +373,23 @@ Image Symbol Table
     ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+=======
+>>>>>>> Stashed changes
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+>>>>>>> Stashed changes
     ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+<<<<<<< Updated upstream
 =======
 =======
     ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
@@ -383,7 +410,12 @@ Image Symbol Table
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+>>>>>>> Stashed changes
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
     ../fplib/d2f.s                           0x00000000   Number         0  d2f.o ABSOLUTE
@@ -482,6 +514,7 @@ Image Symbol Table
     i.MyTimer_Base_Init                      0x080003b4   Section        0  mytimer.o(i.MyTimer_Base_Init)
     i.MyTimer_Base_Start                     0x08000414   Section        0  mytimer.o(i.MyTimer_Base_Start)
     i.MyTimer_PWM                            0x08000420   Section        0  mytimer.o(i.MyTimer_PWM)
+<<<<<<< Updated upstream
     i.SetSysClock                            0x080007c0   Section        0  system_stm32f10x.o(i.SetSysClock)
     SetSysClock                              0x080007c1   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
     i.SetSysClockTo72                        0x080007c8   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
@@ -538,6 +571,23 @@ Image Symbol Table
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+    i.SetSysClock                            0x080006f4   Section        0  system_stm32f10x.o(i.SetSysClock)
+    SetSysClock                              0x080006f5   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
+    i.SetSysClockTo72                        0x080006fc   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
+    SetSysClockTo72                          0x080006fd   Thumb Code   214  system_stm32f10x.o(i.SetSysClockTo72)
+    i.Set_Duty_PWM                           0x080007dc   Section        0  mytimer.o(i.Set_Duty_PWM)
+    i.SystemInit                             0x08000828   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.TIM1_UP_IRQHandler                     0x08000888   Section        0  mytimer.o(i.TIM1_UP_IRQHandler)
+    i.TIM2_IRQHandler                        0x080008ac   Section        0  mytimer.o(i.TIM2_IRQHandler)
+    i.TIM3_IRQHandler                        0x080008d0   Section        0  mytimer.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x080008f4   Section        0  mytimer.o(i.TIM4_IRQHandler)
+    i.UART_config                            0x08000918   Section        0  uart.o(i.UART_config)
+    i.USART1_IRQHandler                      0x08000988   Section        0  uart.o(i.USART1_IRQHandler)
+    i.handling                               0x0800099c   Section        0  uart.o(i.handling)
+    i.init_timer_PWM                         0x08000a0c   Section        0  uart.o(i.init_timer_PWM)
+    i.main                                   0x08000a28   Section        0  plateau.o(i.main)
 >>>>>>> Stashed changes
     .data                                    0x20000000   Section       16  mytimer.o(.data)
     .data                                    0x20000010   Section        4  uart.o(.data)
@@ -705,6 +755,7 @@ Image Symbol Table
     MyTimer_ActiveIT                         0x080002f1   Thumb Code   160  mytimer.o(i.MyTimer_ActiveIT)
     MyTimer_Base_Init                        0x080003b5   Thumb Code    80  mytimer.o(i.MyTimer_Base_Init)
     MyTimer_Base_Start                       0x08000415   Thumb Code    10  mytimer.o(i.MyTimer_Base_Start)
+<<<<<<< Updated upstream
     MyTimer_PWM                              0x08000421   Thumb Code   906  mytimer.o(i.MyTimer_PWM)
     Set_Duty_PWM                             0x080008a9   Thumb Code    76  mytimer.o(i.Set_Duty_PWM)
     SystemInit                               0x080008f5   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
@@ -765,6 +816,22 @@ Image Symbol Table
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+    MyTimer_PWM                              0x08000421   Thumb Code   704  mytimer.o(i.MyTimer_PWM)
+    Set_Duty_PWM                             0x080007dd   Thumb Code    76  mytimer.o(i.Set_Duty_PWM)
+    SystemInit                               0x08000829   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
+    TIM1_UP_IRQHandler                       0x08000889   Thumb Code    28  mytimer.o(i.TIM1_UP_IRQHandler)
+    TIM2_IRQHandler                          0x080008ad   Thumb Code    32  mytimer.o(i.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x080008d1   Thumb Code    28  mytimer.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x080008f5   Thumb Code    28  mytimer.o(i.TIM4_IRQHandler)
+    UART_config                              0x08000919   Thumb Code    92  uart.o(i.UART_config)
+    USART1_IRQHandler                        0x08000989   Thumb Code    10  uart.o(i.USART1_IRQHandler)
+    handling                                 0x0800099d   Thumb Code    98  uart.o(i.handling)
+    init_timer_PWM                           0x08000a0d   Thumb Code    24  uart.o(i.init_timer_PWM)
+    main                                     0x08000a29   Thumb Code    52  plateau.o(i.main)
+    Region$$Table$$Base                      0x08000a68   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000a88   Number         0  anon$$obj.o(Region$$Table)
+>>>>>>> Stashed changes
     Ptr_fct1                                 0x20000000   Data           4  mytimer.o(.data)
     Ptr_fct2                                 0x20000004   Data           4  mytimer.o(.data)
     Ptr_fct3                                 0x20000008   Data           4  mytimer.o(.data)
@@ -783,70 +850,74 @@ Memory Map of the image
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Load Region LR_1 (Base: 0x08000000, Size: 0x00000b40, Max: 0xffffffff, ABSOLUTE)
+=======
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00000a9c, Max: 0xffffffff, ABSOLUTE)
+>>>>>>> Stashed changes
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000b2c, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000a88, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000000ec   Data   RO          266    RESET               startup_stm32f10x_md.o
-    0x080000ec   0x080000ec   0x00000008   Code   RO          321  * !!!main             c_w.l(__main.o)
-    0x080000f4   0x080000f4   0x00000034   Code   RO          480    !!!scatter          c_w.l(__scatter.o)
-    0x08000128   0x08000128   0x0000001a   Code   RO          482    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x08000000   0x08000000   0x000000ec   Data   RO          272    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x080000ec   0x00000008   Code   RO          327  * !!!main             c_w.l(__main.o)
+    0x080000f4   0x080000f4   0x00000034   Code   RO          486    !!!scatter          c_w.l(__scatter.o)
+    0x08000128   0x08000128   0x0000001a   Code   RO          488    !!handler_copy      c_w.l(__scatter_copy.o)
     0x08000142   0x08000142   0x00000002   PAD
-    0x08000144   0x08000144   0x0000001c   Code   RO          484    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x08000160   0x08000160   0x00000002   Code   RO          348    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          355    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          357    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          360    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          362    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          364    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          367    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          369    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          371    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          373    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          375    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          377    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          379    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          381    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          383    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          385    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          387    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          391    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          393    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          395    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000000   Code   RO          397    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x08000162   0x08000162   0x00000002   Code   RO          398    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
-    0x08000164   0x08000164   0x00000002   Code   RO          418    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x08000166   0x08000166   0x00000000   Code   RO          431    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x08000166   0x08000166   0x00000000   Code   RO          433    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x08000166   0x08000166   0x00000000   Code   RO          435    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
-    0x08000166   0x08000166   0x00000000   Code   RO          438    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
-    0x08000166   0x08000166   0x00000000   Code   RO          441    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x08000166   0x08000166   0x00000000   Code   RO          443    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
-    0x08000166   0x08000166   0x00000000   Code   RO          446    .ARM.Collect$$libshutdown$$00000011  c_w.l(libshutdown2.o)
-    0x08000166   0x08000166   0x00000002   Code   RO          447    .ARM.Collect$$libshutdown$$00000012  c_w.l(libshutdown2.o)
-    0x08000168   0x08000168   0x00000000   Code   RO          323    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x08000168   0x08000168   0x00000000   Code   RO          325    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x08000168   0x08000168   0x00000006   Code   RO          337    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x0800016e   0x0800016e   0x00000000   Code   RO          327    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x0800016e   0x0800016e   0x00000004   Code   RO          328    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x08000172   0x08000172   0x00000000   Code   RO          330    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x08000172   0x08000172   0x00000008   Code   RO          331    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x0800017a   0x0800017a   0x00000002   Code   RO          352    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x0800017c   0x0800017c   0x00000000   Code   RO          400    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x0800017c   0x0800017c   0x00000004   Code   RO          401    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x08000180   0x08000180   0x00000006   Code   RO          402    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x08000144   0x08000144   0x0000001c   Code   RO          490    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x08000160   0x08000160   0x00000002   Code   RO          354    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          361    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          363    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          366    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          368    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          370    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          373    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          375    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          377    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          379    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          381    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          383    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          385    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          387    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          389    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          391    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          393    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          397    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          399    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          401    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          403    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x08000162   0x08000162   0x00000002   Code   RO          404    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x08000164   0x08000164   0x00000002   Code   RO          424    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          437    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          439    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          441    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          444    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          447    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          449    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          452    .ARM.Collect$$libshutdown$$00000011  c_w.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000002   Code   RO          453    .ARM.Collect$$libshutdown$$00000012  c_w.l(libshutdown2.o)
+    0x08000168   0x08000168   0x00000000   Code   RO          329    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x08000168   0x08000168   0x00000000   Code   RO          331    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x08000168   0x08000168   0x00000006   Code   RO          343    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x0800016e   0x0800016e   0x00000000   Code   RO          333    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x0800016e   0x0800016e   0x00000004   Code   RO          334    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x08000172   0x08000172   0x00000000   Code   RO          336    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x08000172   0x08000172   0x00000008   Code   RO          337    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0800017a   0x0800017a   0x00000002   Code   RO          358    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x0800017c   0x0800017c   0x00000000   Code   RO          406    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x0800017c   0x0800017c   0x00000004   Code   RO          407    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000180   0x08000180   0x00000006   Code   RO          408    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x08000186   0x08000186   0x00000002   PAD
-    0x08000188   0x08000188   0x00000040   Code   RO          267  * .text               startup_stm32f10x_md.o
-    0x080001c8   0x080001c8   0x00000006   Code   RO          319    .text               c_w.l(heapauxi.o)
-    0x080001ce   0x080001ce   0x0000004a   Code   RO          339    .text               c_w.l(sys_stackheap_outer.o)
-    0x08000218   0x08000218   0x00000012   Code   RO          341    .text               c_w.l(exit.o)
+    0x08000188   0x08000188   0x00000040   Code   RO          273  * .text               startup_stm32f10x_md.o
+    0x080001c8   0x080001c8   0x00000006   Code   RO          325    .text               c_w.l(heapauxi.o)
+    0x080001ce   0x080001ce   0x0000004a   Code   RO          345    .text               c_w.l(sys_stackheap_outer.o)
+    0x08000218   0x08000218   0x00000012   Code   RO          347    .text               c_w.l(exit.o)
     0x0800022a   0x0800022a   0x00000002   PAD
-    0x0800022c   0x0800022c   0x00000008   Code   RO          349    .text               c_w.l(libspace.o)
-    0x08000234   0x08000234   0x0000000c   Code   RO          410    .text               c_w.l(sys_exit.o)
-    0x08000240   0x08000240   0x00000002   Code   RO          421    .text               c_w.l(use_no_semi.o)
-    0x08000242   0x08000242   0x00000000   Code   RO          423    .text               c_w.l(indicate_semi.o)
+    0x0800022c   0x0800022c   0x00000008   Code   RO          355    .text               c_w.l(libspace.o)
+    0x08000234   0x08000234   0x0000000c   Code   RO          416    .text               c_w.l(sys_exit.o)
+    0x08000240   0x08000240   0x00000002   Code   RO          427    .text               c_w.l(use_no_semi.o)
+    0x08000242   0x08000242   0x00000000   Code   RO          429    .text               c_w.l(indicate_semi.o)
     0x08000242   0x08000242   0x00000002   PAD
     0x08000244   0x08000244   0x0000009c   Code   RO           93    i.MyGPIO_Init       my_gpio.o
     0x080002e0   0x080002e0   0x00000008   Code   RO           95    i.MyGPIO_Reset      my_gpio.o
@@ -855,34 +926,36 @@ Memory Map of the image
     0x080003b4   0x080003b4   0x00000060   Code   RO          139    i.MyTimer_Base_Init  mytimer.o
     0x08000414   0x08000414   0x0000000a   Code   RO          140    i.MyTimer_Base_Start  mytimer.o
     0x0800041e   0x0800041e   0x00000002   PAD
-    0x08000420   0x08000420   0x000003a0   Code   RO          142    i.MyTimer_PWM       mytimer.o
-    0x080007c0   0x080007c0   0x00000008   Code   RO          274    i.SetSysClock       system_stm32f10x.o
-    0x080007c8   0x080007c8   0x000000e0   Code   RO          275    i.SetSysClockTo72   system_stm32f10x.o
-    0x080008a8   0x080008a8   0x0000004c   Code   RO          143    i.Set_Duty_PWM      mytimer.o
-    0x080008f4   0x080008f4   0x00000060   Code   RO          277    i.SystemInit        system_stm32f10x.o
-    0x08000954   0x08000954   0x00000024   Code   RO          144    i.TIM1_UP_IRQHandler  mytimer.o
-    0x08000978   0x08000978   0x00000024   Code   RO          145    i.TIM2_IRQHandler   mytimer.o
-    0x0800099c   0x0800099c   0x00000024   Code   RO          146    i.TIM3_IRQHandler   mytimer.o
-    0x080009c0   0x080009c0   0x00000024   Code   RO          147    i.TIM4_IRQHandler   mytimer.o
-    0x080009e4   0x080009e4   0x00000070   Code   RO          222    i.UART_config       uart.o
-    0x08000a54   0x08000a54   0x00000014   Code   RO          223    i.USART1_IRQHandler  uart.o
-    0x08000a68   0x08000a68   0x00000068   Code   RO          224    i.handling          uart.o
-    0x08000ad0   0x08000ad0   0x0000003c   Code   RO            4    i.main              plateau.o
-    0x08000b0c   0x08000b0c   0x00000020   Data   RO          478    Region$$Table       anon$$obj.o
+    0x08000420   0x08000420   0x000002d4   Code   RO          142    i.MyTimer_PWM       mytimer.o
+    0x080006f4   0x080006f4   0x00000008   Code   RO          280    i.SetSysClock       system_stm32f10x.o
+    0x080006fc   0x080006fc   0x000000e0   Code   RO          281    i.SetSysClockTo72   system_stm32f10x.o
+    0x080007dc   0x080007dc   0x0000004c   Code   RO          143    i.Set_Duty_PWM      mytimer.o
+    0x08000828   0x08000828   0x00000060   Code   RO          283    i.SystemInit        system_stm32f10x.o
+    0x08000888   0x08000888   0x00000024   Code   RO          144    i.TIM1_UP_IRQHandler  mytimer.o
+    0x080008ac   0x080008ac   0x00000024   Code   RO          145    i.TIM2_IRQHandler   mytimer.o
+    0x080008d0   0x080008d0   0x00000024   Code   RO          146    i.TIM3_IRQHandler   mytimer.o
+    0x080008f4   0x080008f4   0x00000024   Code   RO          147    i.TIM4_IRQHandler   mytimer.o
+    0x08000918   0x08000918   0x00000070   Code   RO          222    i.UART_config       uart.o
+    0x08000988   0x08000988   0x00000014   Code   RO          223    i.USART1_IRQHandler  uart.o
+    0x0800099c   0x0800099c   0x00000070   Code   RO          224    i.handling          uart.o
+    0x08000a0c   0x08000a0c   0x0000001c   Code   RO          225    i.init_timer_PWM    uart.o
+    0x08000a28   0x08000a28   0x00000040   Code   RO            4    i.main              plateau.o
+    0x08000a68   0x08000a68   0x00000020   Data   RO          484    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000b2c, Size: 0x00000014, Max: 0xffffffff, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x20000000   0x08000b2c   0x00000010   Data   RW          148    .data               mytimer.o
-    0x20000010   0x08000b3c   0x00000004   Data   RW          225    .data               uart.o
-
-
-    Execution Region ER_ZI (Exec base: 0x20000014, Load base: 0x08000b40, Size: 0x00000664, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000a88, Size: 0x00000014, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
+    0x20000000   0x08000a88   0x00000010   Data   RW          148    .data               mytimer.o
+    0x20000010   0x08000a98   0x00000004   Data   RW          226    .data               uart.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000014, Load base: 0x08000a9c, Size: 0x00000664, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+<<<<<<< Updated upstream
     0x20000014        -       0x00000060   Zero   RW          350    .bss                c_w.l(libspace.o)
     0x20000074   0x08000b40   0x00000004   PAD
     0x20000078        -       0x00000200   Zero   RW          265    HEAP                startup_stm32f10x_md.o
@@ -1018,6 +1091,12 @@ Memory Map of the image
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+    0x20000014        -       0x00000060   Zero   RW          356    .bss                c_w.l(libspace.o)
+    0x20000074   0x08000a9c   0x00000004   PAD
+    0x20000078        -       0x00000200   Zero   RW          271    HEAP                startup_stm32f10x_md.o
+    0x20000278        -       0x00000400   Zero   RW          270    STACK               startup_stm32f10x_md.o
+>>>>>>> Stashed changes
 
 
 ==============================================================================
@@ -1030,13 +1109,14 @@ Image component sizes
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
        172         20          0          0          0       1830   my_gpio.o
-      1450        102          0         16          0       5354   mytimer.o
-        60         12          0          0          0     206739   plateau.o
+      1246        100          0         16          0       5226   mytimer.o
+        64         12          0          0          0     206743   plateau.o
         64         26        236          0       1536        784   startup_stm32f10x_md.o
        328         28          0          0          0       1853   system_stm32f10x.o
-       236         42          0          4          0       1351   uart.o
+       272         48          0          4          0       1744   uart.o
 
     ----------------------------------------------------------------------
+<<<<<<< Updated upstream
       2312        230        268         20       1536     217911   Object Totals
 =======
        232         18          0          0          0       1457   my_girouette.o
@@ -1061,6 +1141,9 @@ Image component sizes
 
     ----------------------------------------------------------------------
       2242        202        268         16       1536     217097   Object Totals
+>>>>>>> Stashed changes
+=======
+      2148        234        268         20       1536     218180   Object Totals
 >>>>>>> Stashed changes
          0          0         32          0          0          0   (incl. Generated)
          4          0          0          0          0          0   (incl. Padding)
@@ -1144,14 +1227,21 @@ Image component sizes
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       2592        246        268         20       1636     217503   Grand Totals
       2592        246        268         20       1636     217503   ELF Image Totals
       2592        246        268         20          0          0   ROM Totals
+=======
+      2428        250        268         20       1636     217720   Grand Totals
+      2428        250        268         20       1636     217720   ELF Image Totals
+      2428        250        268         20          0          0   ROM Totals
+>>>>>>> Stashed changes
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 2860 (   2.79kB)
+    Total RO  Size (Code + RO Data)                 2696 (   2.63kB)
     Total RW  Size (RW Data + ZI Data)              1656 (   1.62kB)
+<<<<<<< Updated upstream
     Total ROM Size (Code + RO Data + RW Data)       2880 (   2.81kB)
 =======
       5260        410        268         16       1632     217493   Grand Totals
@@ -1174,6 +1264,9 @@ Image component sizes
     Total RO  Size (Code + RO Data)                 5528 (   5.40kB)
     Total RW  Size (RW Data + ZI Data)              1648 (   1.61kB)
     Total ROM Size (Code + RO Data + RW Data)       5544 (   5.41kB)
+>>>>>>> Stashed changes
+=======
+    Total ROM Size (Code + RO Data + RW Data)       2716 (   2.65kB)
 >>>>>>> Stashed changes
 
 ==============================================================================

@@ -13,7 +13,7 @@ void MyTimer_Base_Init ( TIM_TypeDef* Timer, unsigned short arr, unsigned short 
 	if (Timer == TIM4) RCC->APB1ENR |= RCC_APB1ENR_TIM4EN;
 	Timer->PSC = psc;
 	Timer->ARR = arr;}
-void MyTimer_PWM(TIM_TypeDef*Timer ,char Channel,int percent_cycle ) {
+void MyTimer_PWM(TIM_TypeDef*Timer ,char Channel) {
 if (Timer == TIM1) {
 	TIM1->BDTR |= 1<<15;
 	switch (Channel){
@@ -22,28 +22,28 @@ if (Timer == TIM1) {
 			Timer->CCMR1 |= TIM_CCMR1_OC1M_1| TIM_CCMR1_OC1M_2;
 			MyGPIO_Init(GPIOA,8,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC1E;
-			Timer-> CCR1 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR1 = Timer->ARR*percent_cycle /100;
 			break;
 		case 2:
 			Timer->CCMR1 &= ~TIM_CCMR1_OC2M_0;
 			Timer->CCMR1 |= TIM_CCMR1_OC2M_1| TIM_CCMR1_OC2M_2;
 			MyGPIO_Init(GPIOA,9,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC2E;
-			Timer-> CCR2 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR2 = Timer->ARR*percent_cycle /100;
 			break;
 		case 3:
 			Timer->CCMR2 &= ~TIM_CCMR2_OC3M_0;
 			Timer->CCMR2 |= TIM_CCMR2_OC3M_1| TIM_CCMR2_OC3M_2;
 			MyGPIO_Init(GPIOA,10,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC3E;
-			Timer-> CCR3 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR3 = Timer->ARR*percent_cycle /100;
 			break;
 		case 4:
 			Timer->CCMR2 &= ~TIM_CCMR2_OC4M_0;
 			Timer->CCMR2 |= TIM_CCMR2_OC4M_1| TIM_CCMR2_OC4M_2;
 			MyGPIO_Init(GPIOA,11,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC4E;
-			Timer-> CCR4 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR4 = Timer->ARR*percent_cycle /100;
 			break;
 	}	
 
@@ -55,28 +55,28 @@ if (Timer == TIM2) {
 			Timer->CCMR1 |= TIM_CCMR1_OC1M_1| TIM_CCMR1_OC1M_2;
 			MyGPIO_Init(GPIOA,0,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC1E;
-			Timer-> CCR1 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR1 = Timer->ARR*percent_cycle /100;
 			break;
 		case 2:
 			Timer->CCMR1 &= ~TIM_CCMR1_OC2M_0;
 			Timer->CCMR1 |= TIM_CCMR1_OC2M_1| TIM_CCMR1_OC2M_2;
 			MyGPIO_Init(GPIOA,1,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC2E;
-			Timer-> CCR2 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR2 = Timer->ARR*percent_cycle /100;
 			break;
 		case 3:
 			Timer->CCMR2 &= ~TIM_CCMR2_OC3M_0;
 			Timer->CCMR2 |= TIM_CCMR2_OC3M_1| TIM_CCMR2_OC3M_2;
 			MyGPIO_Init(GPIOA,2,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC3E;
-			Timer-> CCR3 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR3 = Timer->ARR*percent_cycle /100;
 			break;
 		case 4:
 			Timer->CCMR2 &= ~TIM_CCMR2_OC4M_0;
 			Timer->CCMR2 |= TIM_CCMR2_OC4M_1| TIM_CCMR2_OC4M_2;
 			MyGPIO_Init(GPIOA,3,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC4E;
-			Timer-> CCR4 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR4 = Timer->ARR*percent_cycle /100;
 			break;
 	}	
 }
@@ -87,28 +87,28 @@ if (Timer == TIM3) {
 			Timer->CCMR1 |= TIM_CCMR1_OC1M_1| TIM_CCMR1_OC1M_2;
 			MyGPIO_Init(GPIOA,6,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC1E;
-			Timer-> CCR1 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR1 = Timer->ARR*percent_cycle /100;
 			break;
 		case 2:
 			Timer->CCMR1 &= ~TIM_CCMR1_OC2M_0;
 			Timer->CCMR1 |= TIM_CCMR1_OC2M_1| TIM_CCMR1_OC2M_2;
 			MyGPIO_Init(GPIOA,7,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC2E;
-		  Timer-> CCR2 = Timer->ARR*percent_cycle /100;
+		  //Timer-> CCR2 = Timer->ARR*percent_cycle /100;
 			break;
 		case 3:
 			Timer->CCMR2 &= ~TIM_CCMR2_OC3M_0;
 			Timer->CCMR2 |= TIM_CCMR2_OC3M_1| TIM_CCMR2_OC3M_2;
 			MyGPIO_Init(GPIOB,0,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC3E;
-			Timer-> CCR3 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR3 = Timer->ARR*percent_cycle /100;
 			break;
 		case 4:
 			Timer->CCMR2 &= ~TIM_CCMR2_OC4M_0;
 			Timer->CCMR2 |= TIM_CCMR2_OC4M_1| TIM_CCMR2_OC4M_2;
 			MyGPIO_Init(GPIOB,1,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC4E;
-			Timer-> CCR4 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR4 = Timer->ARR*percent_cycle /100;
 			break;
 	}	
 }
@@ -119,28 +119,28 @@ if (Timer == TIM4) {
 			Timer->CCMR1 |= TIM_CCMR1_OC1M_1| TIM_CCMR1_OC1M_2;
 			MyGPIO_Init(GPIOB,6,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC1E;
-			Timer-> CCR1 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR1 = Timer->ARR*percent_cycle /100;
 			break;
 		case 2:
 			Timer->CCMR1 &= ~TIM_CCMR1_OC2M_0;
 			Timer->CCMR1 |= TIM_CCMR1_OC2M_1| TIM_CCMR1_OC2M_2;
 			MyGPIO_Init(GPIOB,7,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC2E;
-			Timer-> CCR2 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR2 = Timer->ARR*percent_cycle /100;
 			break;
 		case 3:
 			Timer->CCMR2 &= ~TIM_CCMR2_OC3M_0;
 			Timer->CCMR2 |= TIM_CCMR2_OC3M_1| TIM_CCMR2_OC3M_2;
 			MyGPIO_Init(GPIOB,8,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC3E;
-			Timer-> CCR3 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR3 = Timer->ARR*percent_cycle /100;
 			break;
 		case 4:
 			Timer->CCMR2 &= ~TIM_CCMR2_OC4M_0;
 			Timer->CCMR2 |= TIM_CCMR2_OC4M_1| TIM_CCMR2_OC4M_2;
 			MyGPIO_Init(GPIOB,9,AltOut_Ppull);
 			Timer->CCER |= TIM_CCER_CC4E;
-			Timer-> CCR4 = Timer->ARR*percent_cycle /100;
+			//Timer-> CCR4 = Timer->ARR*percent_cycle /100;
 			break;
 	}	
 }

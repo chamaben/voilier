@@ -24,24 +24,26 @@ void UART_config(void) {
 }
 //
 
-
+void init_timer_PWM () {
+	MyTimer_Base_Init (TIM4, 719, 4);
+	MyTimer_PWM(TIM4,1);
+}
 
 
 
 void handling(void) {
 		// sens 
-		if (rx_byte<-10) {
+		if (rx_byte<0) {
 			MyGPIO_Reset ( GPIOA , 6 );
+			Set_Duty_PWM(TIM4, 1, abs(rx_byte));
+			MyTimer_Base_Start ( TIM4);
 		}
-		else if (rx_byte>10) {
+		else if (rx_byte>0) {
 			MyGPIO_Set ( GPIOA , 6 );
+			Set_Duty_PWM(TIM4, 1, abs(rx_byte));
+			MyTimer_Base_Start ( TIM4);
 		}
-		// vitesse
-		// timer4 PWM
-		MyTimer_Base_Init (TIM4, 719, 4);
-		MyTimer_PWM(TIM4,1, abs(rx_byte));
-		Set_Duty_PWM(TIM4, 1, 25);
-		MyTimer_Base_Start ( TIM4);
+		
 }
 	
 
