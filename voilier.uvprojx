@@ -357,7 +357,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include</IncludePath>
+              <IncludePath></IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
@@ -388,11 +388,6 @@
               <FileType>1</FileType>
               <FilePath>.\plateau.c</FilePath>
             </File>
-            <File>
-              <FileName>principal.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\principal.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -402,11 +397,6 @@
               <FileName>ADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Include\ADC.c</FilePath>
-            </File>
-            <File>
-              <FileName>My_Girouette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Include\My_Girouette.c</FilePath>
             </File>
             <File>
               <FileName>My_GPIO.c</FileName>
@@ -815,11 +805,6 @@
               <FileType>1</FileType>
               <FilePath>.\plateau.c</FilePath>
             </File>
-            <File>
-              <FileName>principal.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\principal.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -829,11 +814,6 @@
               <FileName>ADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Include\ADC.c</FilePath>
-            </File>
-            <File>
-              <FileName>My_Girouette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Include\My_Girouette.c</FilePath>
             </File>
             <File>
               <FileName>My_GPIO.c</FileName>

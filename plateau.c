@@ -1,13 +1,14 @@
-#include "stm32f10x.h"
-#include "MyTimer.h"
-#include "UART.h"
+#include "stm32f10x.h"                  // Device header
 #include "My_GPIO.h"
+#include "UART.h"
+#include "MyTimer.h"
 
 
-int main2 (void)
+int main (void)
 {
 	UART_config();
 	MyGPIO_Init (GPIOA, 6, Out_Ppull );
+	MyGPIO_Init (GPIOB, 6, AltOut_Ppull );
 	
 	
 	// timer3 Interruption 300ms

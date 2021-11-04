@@ -4,7 +4,7 @@
 #include "My_GPIO.h"
 #include "stdlib.h"
 
-signed int rx_byte;
+int rx_byte;
 
 void UART_config(void) {
 	// enable clock
@@ -20,7 +20,6 @@ void UART_config(void) {
 	USART1->CR1 |= USART_CR1_RXNEIE ;
 	NVIC->ISER[1] |= 1<<(37-32);
 	NVIC->IP[USART1_IRQn] = 1<<4;
-	rx_byte = 0 ;
 }
 //
 
@@ -43,6 +42,7 @@ void handling(void) {
 			Set_Duty_PWM(TIM4, 1, abs(rx_byte));
 			MyTimer_Base_Start ( TIM4);
 		}
+		rx_byte = 0 ;
 		
 }
 	
@@ -50,7 +50,7 @@ void handling(void) {
 
 void USART1_IRQHandler (void)
 {
-	rx_byte = (signed int)USART1-> DR;
+	rx_byte = USART1-> DR;
 }
 
 
