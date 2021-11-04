@@ -13,7 +13,10 @@ int main2 (void)
 	// timer3 Interruption 300ms
 	MyTimer_Base_Init (TIM3, 719, 30000);
 	MyTimer_Base_Start ( TIM3);
+	init_timer_PWM ();
 	MyTimer_ActiveIT  (TIM3 ,5, handling );
+	
+	
 	
 	
 	while (1)
