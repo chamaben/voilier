@@ -1,2 +1,12 @@
 /Objects
 /Listings
+*.crf
+*.d
+*.iex
+*.o
+*.crf
+*.d
+*.dep
+*.htm
+*.axf
+*.lnp
