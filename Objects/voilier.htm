@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\voilier.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\voilier.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Nov 04 12:12:15 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Nov 12 14:48:50 2021
 <BR><P>
 <H3>Maximum Stack Usage =         36 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -470,7 +470,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handling
 </UL>
 
-<P><STRONG><a name="[56]"></a>MyGPIO_Set</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, my_gpio.o(i.MyGPIO_Set))
+<P><STRONG><a name="[55]"></a>MyGPIO_Set</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, my_gpio.o(i.MyGPIO_Set))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handling
 </UL>
 
@@ -480,15 +480,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[58]"></a>MyTimer_Base_Init</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, mytimer.o(i.MyTimer_Base_Init))
+<P><STRONG><a name="[57]"></a>MyTimer_Base_Init</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, mytimer.o(i.MyTimer_Base_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MyTimer_Base_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer_PWM
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer_PWM
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[55]"></a>MyTimer_Base_Start</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, mytimer.o(i.MyTimer_Base_Start))
-<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handling
+<P><STRONG><a name="[58]"></a>MyTimer_Base_Start</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, mytimer.o(i.MyTimer_Base_Start))
+<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer_PWM
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -497,13 +497,14 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer_PWM
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer_PWM
 </UL>
 
 <P><STRONG><a name="[54]"></a>Set_Duty_PWM</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, mytimer.o(i.Set_Duty_PWM))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Set_Duty_PWM
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handling
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer_PWM
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handling
 </UL>
 
 <P><STRONG><a name="[38]"></a>SystemInit</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SystemInit))
@@ -537,35 +538,36 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[32]"></a>USART1_IRQHandler</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, uart.o(i.USART1_IRQHandler))
+<P><STRONG><a name="[32]"></a>USART1_IRQHandler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, uart.o(i.USART1_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[3a]"></a>handling</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, uart.o(i.handling))
+<P><STRONG><a name="[3a]"></a>handling</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, uart.o(i.handling))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = handling &rArr; Set_Duty_PWM
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Duty_PWM
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Set
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Set
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Reset
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> plateau.o(i.main)
 </UL>
-<P><STRONG><a name="[57]"></a>init_timer_PWM</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, uart.o(i.init_timer_PWM))
+<P><STRONG><a name="[56]"></a>init_timer_PWM</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, uart.o(i.init_timer_PWM))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = init_timer_PWM &rArr; MyTimer_PWM &rArr; MyGPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Duty_PWM
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[47]"></a>main</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, plateau.o(i.main))
+<P><STRONG><a name="[47]"></a>main</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, plateau.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = main &rArr; init_timer_PWM &rArr; MyTimer_PWM &rArr; MyGPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer_PWM
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_timer_PWM
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_config
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_ActiveIT
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
 </UL>

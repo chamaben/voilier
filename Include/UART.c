@@ -4,7 +4,7 @@
 #include "My_GPIO.h"
 #include "stdlib.h"
 
-int rx_byte;
+signed char rx_byte;
 
 void UART_config(void) {
 	// enable clock
@@ -26,23 +26,34 @@ void UART_config(void) {
 void init_timer_PWM () {
 	MyTimer_Base_Init (TIM4, 719, 4);
 	MyTimer_PWM(TIM4,1);
+	MyTimer_Base_Start ( TIM4);
+	Set_Duty_PWM(TIM4, 1, 0) ;
+	USART1-> CR1 |= (1<<3);
+	
+	
 }
 
 
 
 void handling(void) {
 		// sens 
-		if (rx_byte<0) {
+		if (rx_byte>0) {
 			MyGPIO_Reset ( GPIOA , 6 );
 			Set_Duty_PWM(TIM4, 1, abs(rx_byte));
-			MyTimer_Base_Start ( TIM4);
+		
 		}
-		else if (rx_byte>0) {
+		else if (rx_byte<0) {
 			MyGPIO_Set ( GPIOA , 6 );
-			Set_Duty_PWM(TIM4, 1, abs(rx_byte));
-			MyTimer_Base_Start ( TIM4);
+			Set_Duty_PWM(TIM4, 1, abs(rx_byte));		
 		}
-		rx_byte = 0 ;
+		else 
+		{
+			Set_Duty_PWM(TIM4, 1, 0);		
+		}
+		// transmission d'informatio n
+		
+		USART1-> DR = 2;
+		
 		
 }
 	
@@ -50,7 +61,7 @@ void handling(void) {
 
 void USART1_IRQHandler (void)
 {
-	rx_byte = USART1-> DR;
+	rx_byte = (signed char) USART1-> DR;
 }
 
 

@@ -8,6 +8,7 @@ int main (void)
 {
 	UART_config();
 	MyGPIO_Init (GPIOA, 6, Out_Ppull );
+	MyGPIO_Init (GPIOA, 9, AltOut_Ppull );
 	MyGPIO_Init (GPIOB, 6, AltOut_Ppull );
 	
 	
@@ -21,5 +22,7 @@ int main (void)
 	
 	
 	while (1)
-	{}
+	{
+		
+	}
 }
