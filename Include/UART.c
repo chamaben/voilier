@@ -6,9 +6,10 @@
 #include "ADC.h"
 
 signed char rx_byte;
-char ok[12] = "batterie ok";
-char ko[12] = "batterie ko";
-nt length=12
+char ok[11] = "batterie ok";
+char ko[11] = "batterie ko";
+int length=11 ;
+	int i = 0 ;
 
 void UART_config(void) {
 	// enable clock
@@ -25,7 +26,6 @@ void UART_config(void) {
 	NVIC->ISER[1] |= 1<<(37-32);
 	NVIC->IP[USART1_IRQn] = 1<<4;
 }
-//
 
 void init_timer_PWM () {
 	MyTimer_Base_Init (TIM4, 719, 4);
@@ -58,18 +58,21 @@ void handling(void) {
 		
 		//lancer la conv
 		conv = ADC_conversion_Single(ADC1);
-		if (conv >= 1365) {
-			for (int i=0; i<length) {
+
+		if (conv >= 0x400) {
+			for (i=0; i<length; i++) {
 				USART1-> DR = ok[i];
-				while (USART1->SR && USART_SR_TXE != USART_SR_TXE);
+				while ( (USART1->SR & USART_SR_TXE) != USART_SR_TXE);
 			}
 		}
 		else {
-			for (int i=0; i<length) {
+			for (i=0; i<length ; i++) {
 				USART1-> DR = ko[i];
-				while (USART1->SR && USART_SR_TXE != USART_SR_TXE);
+				while ((USART1->SR & USART_SR_TXE )!= USART_SR_TXE);
 			}
 		}
+		USART1-> DR = 0x0D;
+		while ((USART1->SR & USART_SR_TXE )!= USART_SR_TXE);
 		
 		
 }

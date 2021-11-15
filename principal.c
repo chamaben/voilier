@@ -27,13 +27,13 @@ int main (void){
 	// ADC
 	configure_gpio_pb0_analog_input(GPIOA);
 	clock_ADC(ADC1);
-	Init_ADC_Single_Conv(ADC1,2);	
+	Init_ADC_Single_Conv(ADC1,7);	
 	
 	// timer3 Interruption 300ms
 	MyTimer_Base_Init (TIM3, 719, 30000);
 	MyTimer_Base_Start ( TIM3);
 	init_timer_PWM ();
-	MyTimer_ActiveIT  (TIM3 ,5, handling );
+	MyTimer_ActiveIT  (TIM3 ,5, aux );
 	
 	
 	while(1){

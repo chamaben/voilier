@@ -1,5 +1,4 @@
 --cpu Cortex-M3
-".\objects\plateau.o"
 ".\objects\principal.o"
 ".\objects\my_girouette.o"
 ".\objects\adc.o"
