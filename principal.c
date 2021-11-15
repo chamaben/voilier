@@ -11,7 +11,7 @@
 //pin A9 girouette B
 int main (void){
 	
-	//init_girouette(TIM1,TIM2,GPIOA,4);
+	init_girouette(TIM1,TIM2,GPIOA,4);
 	
 	UART_config();
 	MyGPIO_Init (GPIOA, 6, Out_Ppull );
