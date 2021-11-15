@@ -3,8 +3,11 @@
 #include "stm32f10x.h"
 #include "My_GPIO.h"
 #include "stdlib.h"
+#include "ADC.h"
 
 signed char rx_byte;
+char ok[12] = "batterie ok";
+char ko[12] = "batterie ko";
 
 void UART_config(void) {
 	// enable clock
@@ -34,7 +37,7 @@ void init_timer_PWM () {
 }
 
 
-
+int conv ;
 void handling(void) {
 		// sens 
 		if (rx_byte>0) {
@@ -52,7 +55,12 @@ void handling(void) {
 		}
 		// transmission d'informatio n
 		
-		USART1-> DR = 2;
+		USART1-> DR = 'a';
+		//lancer la conv
+		conv = ADC_conversion_Single(ADC1);
+		if (conv >= 1365) {
+		}
+		else {}
 		
 		
 }

@@ -388,6 +388,16 @@
               <FileType>1</FileType>
               <FilePath>.\plateau.c</FilePath>
             </File>
+            <File>
+              <FileName>principal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\principal.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Include\My_Girouette.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -804,6 +814,16 @@
               <FileName>plateau.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\plateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>principal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\principal.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Include\My_Girouette.c</FilePath>
             </File>
           </Files>
         </Group>
