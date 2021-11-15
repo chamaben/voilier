@@ -6,12 +6,17 @@
 
 
 //pin A4, index girouette
-//pin A1, sortie pwm
-//pin A8 girouette A
-//pin A9 girouette B
+//pin A8, sortie pwm
+//pin A0 girouette A
+//pin A1 girouette B
+void aux (void) {
+	gestion_girouette() ;
+	handling ();
+}
+
 int main (void){
 	
-	init_girouette(TIM1,TIM2,GPIOA,4);
+	init_girouette(TIM2,TIM1,GPIOA,4);
 	
 	UART_config();
 	MyGPIO_Init (GPIOA, 6, Out_Ppull );

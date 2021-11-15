@@ -8,6 +8,7 @@
 signed char rx_byte;
 char ok[12] = "batterie ok";
 char ko[12] = "batterie ko";
+nt length=12
 
 void UART_config(void) {
 	// enable clock
@@ -55,12 +56,20 @@ void handling(void) {
 		}
 		// transmission d'informatio n
 		
-		USART1-> DR = 'a';
 		//lancer la conv
 		conv = ADC_conversion_Single(ADC1);
 		if (conv >= 1365) {
+			for (int i=0; i<length) {
+				USART1-> DR = ok[i];
+				while (USART1->SR && USART_SR_TXE != USART_SR_TXE);
+			}
 		}
-		else {}
+		else {
+			for (int i=0; i<length) {
+				USART1-> DR = ko[i];
+				while (USART1->SR && USART_SR_TXE != USART_SR_TXE);
+			}
+		}
 		
 		
 }
